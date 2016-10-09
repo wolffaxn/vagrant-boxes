@@ -35,7 +35,6 @@
       "type": "shell",
       "scripts": [
         "scripts/vagrant.sh",
-        "scripts/vbox.sh",
         "scripts/cleanup.sh"
       ],
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'"
