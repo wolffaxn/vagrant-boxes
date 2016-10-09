@@ -1,0 +1,51 @@
+{
+  "builders": [
+    {
+      "type": "virtualbox-iso",
+      "vm_name": "centos-7.2-x86_64",
+      "guest_os_type": "RedHat_64",
+      "boot_command": [
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter>"
+      ],
+      "boot_wait": "10s",
+      "disk_size": 81920,
+      "guest_additions_url": "iso/VBoxGuestAdditions_5.0.26.iso",
+      "guest_additions_sha256": "7458ee5a7121a7d243fd6a7528ba427945d9120c5efc7cd75b3951fb01f09c59",
+      "headless": "true",
+      "http_directory": "http/centos-7.2",
+      "iso_urls": [
+        "iso/CentOS-7-x86_64-Minimal-1511.iso",
+        "http://ftp.halifax.rwth-aachen.de/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso"
+      ],
+      "iso_checksum_type": "sha256",
+      "iso_checksum": "f90e4d28fa377669b2db16cbcb451fcb9a89d2460e3645993e30e137ac37d284",
+      "ssh_password": "vagrant",
+      "ssh_username": "vagrant",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "3600s",
+      "vboxmanage": [
+        [ "modifyvm", "{{.Name}}", "--memory", "2048" ],
+        [ "modifyvm", "{{.Name}}", "--cpus",   "2"    ]
+      ],
+      "shutdown_command": "echo 'vagrant' | sudo -S /sbin/halt -h -p"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "scripts": [
+        "scripts/vagrant.sh",
+        "scripts/vbox.sh",
+        "scripts/cleanup.sh"
+      ],
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'"
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "compression_level": 9,
+      "output": "./builds/centos-7.2-x86_64.box"
+    }
+  ]
+}
