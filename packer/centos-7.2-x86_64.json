@@ -9,8 +9,6 @@
       ],
       "boot_wait": "10s",
       "disk_size": 81920,
-      "guest_additions_url": "iso/VBoxGuestAdditions_5.0.26.iso",
-      "guest_additions_sha256": "7458ee5a7121a7d243fd6a7528ba427945d9120c5efc7cd75b3951fb01f09c59",
       "headless": "true",
       "http_directory": "http/centos-7.2",
       "iso_urls": [
@@ -34,8 +32,7 @@
     {
       "type": "shell",
       "scripts": [
-        "scripts/vagrant.sh",
-        "scripts/cleanup.sh"
+        "scripts/system.sh"
       ],
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'"
     }
