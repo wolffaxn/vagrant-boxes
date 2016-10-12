@@ -9,6 +9,7 @@
       ],
       "boot_wait": "10s",
       "disk_size": 81920,
+      "hard_drive_interface": "sata",
       "headless": "true",
       "http_directory": "http/centos-7.2",
       "iso_urls": [
@@ -23,7 +24,9 @@
       "ssh_wait_timeout": "3600s",
       "vboxmanage": [
         [ "modifyvm", "{{.Name}}", "--memory", "2048" ],
-        [ "modifyvm", "{{.Name}}", "--cpus",   "2"    ]
+        [ "modifyvm", "{{.Name}}", "--cpus",   "2"    ],
+        [ "modifyvm", "{{.Name}}", "--vram",   "12"   ],
+        [ "modifyvm", "{{.Name}}", "--vrde",   "off"  ]
       ],
       "shutdown_command": "echo 'vagrant' | sudo -S /sbin/halt -h -p"
     }
