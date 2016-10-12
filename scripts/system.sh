@@ -28,6 +28,14 @@ echo "options ipv6 disable=1" > /etc/modprobe.d/disable-ipv6.conf
 echo "Disabling Avahi"
 systemctl disable avahi-daemon.service
 
+# disable Chrony
+echo "Disabling Chrony"
+systemctl disable chronyd.service
+
+# disable WPA supplicant
+echo "Disabling WPA supplicant"
+systemctl disable wpa_supplicant.service
+
 # disable Kdump
 echo "Disabling Kdump"
 systemctl disable kdump.service
