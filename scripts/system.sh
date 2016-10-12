@@ -12,8 +12,8 @@ yum clean all
 # clean up network devices
 echo "Cleaning up network devices"
 rm -f /etc/udev/rules.d/70-persistent-net.rules
-/bin/find /etc/sysconfig/network-scripts -name "ifcfg-enp0s*" -exec rm -f '{}' +
-/bin/find /var/lib/dhclient -type f -exec rm -f '{}' +
+find /etc/sysconfig/network-scripts -name "ifcfg-enp0s*" -exec rm -f '{}' +
+find /var/lib/dhclient -type f -exec rm -f '{}' +
 
 # remove hostname
 echo "Removing hostname"
@@ -28,8 +28,8 @@ echo "options ipv6 disable=1" > /etc/modprobe.d/disable-ipv6.conf
 echo "Disabling Avahi"
 systemctl disable avahi-daemon.service
 
-# disable kdump
-echo "Disabling kdump"
+# disable Kdump
+echo "Disabling Kdump"
 systemctl disable kdump.service
 
 # remove temporary files
