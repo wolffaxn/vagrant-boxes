@@ -5,5 +5,5 @@
 Packer templates for building minimal Vagrant boxes
 
 ```bash
-packer build --force packer/centos-7.2-x86_64.json
+packer build --force centos-7.2/centos7.json
 ```

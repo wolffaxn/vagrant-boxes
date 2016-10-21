@@ -2,16 +2,16 @@
   "builders": [
     {
       "type": "virtualbox-iso",
-      "vm_name": "centos-7.2-x86_64",
+      "vm_name": "centos7",
       "guest_os_type": "RedHat_64",
       "boot_command": [
-        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter>"
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos7.cfg<enter>"
       ],
       "boot_wait": "10s",
       "disk_size": 81920,
       "hard_drive_interface": "sata",
       "headless": "true",
-      "http_directory": "http/centos-7.2",
+      "http_directory": "centos-7.2/http",
       "iso_urls": [
         "iso/CentOS-7-x86_64-DVD-1511.iso",
         "http://ftp.halifax.rwth-aachen.de/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1511.iso"
@@ -35,7 +35,7 @@
     {
       "type": "shell",
       "scripts": [
-        "scripts/system.sh"
+        "centos-7.2/scripts/system.sh"
       ],
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'"
     }
@@ -45,7 +45,7 @@
       "type": "vagrant",
       "compression_level": 9,
       "keep_input_artifact": true,
-      "output": "./builds/centos-7.2-x86_64.box"
+      "output": "builds/centos7.box"
     }
   ]
 }
