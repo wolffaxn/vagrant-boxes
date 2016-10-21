@@ -13,11 +13,11 @@
       "headless": "true",
       "http_directory": "http/centos-7.2",
       "iso_urls": [
-        "iso/CentOS-7-x86_64-Minimal-1511.iso",
-        "http://ftp.halifax.rwth-aachen.de/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso"
+        "iso/CentOS-7-x86_64-DVD-1511.iso",
+        "http://ftp.halifax.rwth-aachen.de/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1511.iso"
       ],
       "iso_checksum_type": "sha256",
-      "iso_checksum": "f90e4d28fa377669b2db16cbcb451fcb9a89d2460e3645993e30e137ac37d284",
+      "iso_checksum": "907e5755f824c5848b9c8efbb484f3cd945e93faa024bad6ba875226f9683b16",
       "ssh_password": "vagrant",
       "ssh_username": "vagrant",
       "ssh_port": 22,
