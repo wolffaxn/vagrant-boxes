@@ -2,7 +2,7 @@
   "builders": [
     {
       "type": "virtualbox-iso",
-      "vm_name": "centos7",
+      "vm_name": "centos-7.2-x86_64",
       "guest_os_type": "RedHat_64",
       "boot_command": [
         "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos7.cfg<enter>"
@@ -45,7 +45,7 @@
       "type": "vagrant",
       "compression_level": 9,
       "keep_input_artifact": true,
-      "output": "builds/centos7.box"
+      "output": "builds/centos-7.2-x86_64.box"
     }
   ]
 }
