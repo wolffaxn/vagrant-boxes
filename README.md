@@ -6,4 +6,5 @@ Packer templates for building minimal Vagrant boxes
 
 ```bash
 packer build --force centos-7.2/centos7.json
+packer build --force rhel-7.2/rhel7.json
 ```
