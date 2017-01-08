@@ -4,13 +4,15 @@
 
 Packer templates for building minimal Vagrant boxes
 
-### Tools
+### Requirements
+
+The following software must be installed locally before you can use Packer to build the Vagrant boxes.
 
 * [packer](http://packer.io)
 * [vagrant](http://vagrantup.com)
 * [virtualbox](https://www.virtualbox.org)
 
-### Vagrant boxes
+### Current Vagrant boxes
 
 * CentOS 6.8 (minimal)
 * CentOS 7.3.1611 (minimal)
