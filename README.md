@@ -23,3 +23,10 @@ The following software must be installed locally before you can use Packer to bu
 packer build --force centos-6.8.json
 packer build --force centos-7.3.json
 ```
+
+Add the boxes to Vagrant.
+
+```bash
+vagrant box add wolffaxn/centos6 builds/centos-6.8-x86_64.box
+vagrant box add wolffaxn/centos7 builds/centos-7.3-x86_64.box
+```
