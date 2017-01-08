@@ -1,5 +1,5 @@
 .DS_Store
-build/*.box
+builds/*.box
 iso/*.iso
 output-virtualbox-iso/
 packer_cache/
