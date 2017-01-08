@@ -4,6 +4,12 @@
 
 Packer templates for building minimal Vagrant boxes
 
+### Tools
+
+* [packer](http://packer.io)
+* [vagrant](http://vagrantup.com)
+* [virtualbox](https://www.virtualbox.org)
+
 ### Vagrant boxes
 
 * CentOS 6.8 (minimal)
