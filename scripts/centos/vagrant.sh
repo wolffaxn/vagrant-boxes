@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # add vagrant user
 groupadd vagrant -g 1001
