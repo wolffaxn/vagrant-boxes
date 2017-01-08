@@ -1,4 +1,4 @@
 .DS_Store
+build/*.box
 output-virtualbox-iso/
-iso/
 packer_cache/
