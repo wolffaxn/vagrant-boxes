@@ -30,3 +30,7 @@ Add the boxes to Vagrant.
 vagrant box add wolffaxn/centos6 builds/centos-6.8-x86_64.box
 vagrant box add wolffaxn/centos7 builds/centos-7.3-x86_64.box
 ```
+
+## License
+
+This project is licensed under the terms of the MIT license. See the [LICENSE](LICENSE) file.
