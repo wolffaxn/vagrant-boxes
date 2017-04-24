@@ -14,20 +14,20 @@ The following software must be installed locally before you can use Packer to bu
 
 ### Current Vagrant boxes
 
-* CentOS 6.8 (minimal)
+* CentOS 6.9 (minimal)
 * CentOS 7.3.1611 (minimal)
 
 ### Usage
 
 ```bash
-packer build --force centos-6.8.json
+packer build --force centos-6.9.json
 packer build --force centos-7.3.json
 ```
 
 Add the boxes to Vagrant.
 
 ```bash
-vagrant box add wolffaxn/centos6 builds/centos-6.8-x86_64.box
+vagrant box add wolffaxn/centos6 builds/centos-6.9-x86_64.box
 vagrant box add wolffaxn/centos7 builds/centos-7.3-x86_64.box
 ```
 
