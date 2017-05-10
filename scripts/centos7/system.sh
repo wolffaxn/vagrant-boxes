@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# update packages
-yum clean all
-yum update -y
-
 # clean up network devices
 rm -f /etc/udev/rules.d/70-persistent-net.rules
 find /etc/sysconfig/network-scripts -name "ifcfg-enp0s*" -exec rm -f '{}' +

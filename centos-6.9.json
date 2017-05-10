@@ -35,9 +35,11 @@
     {
       "type": "shell",
       "scripts": [
+        "scripts/centos/base.sh",
         "scripts/centos/vagrant.sh",
         "scripts/centos6/system.sh",
-        "scripts/centos/cleanup.sh"
+        "scripts/centos/cleanup.sh",
+        "scripts/centos/zerodisk.sh"
       ],
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'"
     }
