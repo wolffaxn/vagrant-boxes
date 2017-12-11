@@ -8,27 +8,28 @@ Packer templates for building minimal Vagrant boxes
 
 The following software must be installed locally before you can use Packer to build the Vagrant boxes.
 
-* [packer](http://packer.io)
-* [vagrant](http://vagrantup.com)
-* [virtualbox](https://www.virtualbox.org)
+* [packer](http://packer.io) 1.1.2 or greater
+* [vagrant](http://vagrantup.com) 1.9.3 or greater
+* [virtualbox](https://www.virtualbox.org) 5.1.30 or greater
 
 ### Current Vagrant boxes
 
 * CentOS 6.9 (minimal)
-* CentOS 7.3.1611 (minimal)
+* CentOS 7.4.1708 (minimal)
 
 ### Usage
 
 ```bash
 packer build --force centos-6.9.json
 packer build --force centos-7.3.json
+packer build --force centos-7.4.json
 ```
 
 Add the boxes to Vagrant.
 
 ```bash
 vagrant box add wolffaxn/centos6 builds/centos-6.9-x86_64.box
-vagrant box add wolffaxn/centos7 builds/centos-7.3-x86_64.box
+vagrant box add wolffaxn/centos7 builds/centos-7.4-x86_64.box
 ```
 
 ## License

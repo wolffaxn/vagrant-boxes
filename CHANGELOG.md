@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of vagrant-boxes.
 
+## v0.1.0 (2017-12-11)
+* added CentOS 7.4.1708 x86_64
+
 ## v0.0.3 (2017-05-10)
 * improved shell scripts
 
