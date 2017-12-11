@@ -14,8 +14,9 @@ The following software must be installed locally before you can use Packer to bu
 
 ### Current Vagrant boxes
 
-* CentOS 6.9 (minimal)
-* CentOS 7.4.1708 (minimal)
+* CentOS 6.9
+* CentOS 7.3.1611
+* CentOS 7.4.1708
 
 ### Usage
 
