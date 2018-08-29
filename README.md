@@ -17,6 +17,7 @@ The following software must be installed locally before you can use Packer to bu
 * CentOS 6.9
 * CentOS 7.3.1611
 * CentOS 7.4.1708
+* CentOS 7.5.1804
 
 ### Usage
 
@@ -24,13 +25,14 @@ The following software must be installed locally before you can use Packer to bu
 packer build --force centos-6.9.json
 packer build --force centos-7.3.json
 packer build --force centos-7.4.json
+packer build --force centos-7.5.json
 ```
 
 Add the boxes to Vagrant.
 
 ```bash
 vagrant box add wolffaxn/centos6 builds/centos-6.9-x86_64.box
-vagrant box add wolffaxn/centos7 builds/centos-7.4-x86_64.box
+vagrant box add wolffaxn/centos7 builds/centos-7.5-x86_64.box
 ```
 
 ## License

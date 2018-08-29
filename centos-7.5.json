@@ -1,0 +1,54 @@
+{
+  "builders": [
+    {
+      "type": "virtualbox-iso",
+      "vm_name": "centos-7.5-x86_64",
+      "guest_os_type": "RedHat_64",
+      "boot_command": [
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/anaconda-ks.cfg<enter>"
+      ],
+      "boot_wait": "10s",
+      "disk_size": 81920,
+      "hard_drive_interface": "sata",
+      "headless": "true",
+      "http_directory": "http/centos7",
+      "iso_urls": [
+        "iso/CentOS-7-x86_64-DVD-1804.iso",
+        "http://ftp.halifax.rwth-aachen.de/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1804.iso"
+      ],
+      "iso_checksum_type": "sha256",
+      "iso_checksum": "506e4e06abf778c3435b4e5745df13e79ebfc86565d7ea1e128067ef6b5a6345",
+      "ssh_password": "root",
+      "ssh_username": "root",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "3600s",
+      "vboxmanage": [
+        [ "modifyvm", "{{.Name}}", "--memory", "2048" ],
+        [ "modifyvm", "{{.Name}}", "--cpus",   "2"    ],
+        [ "modifyvm", "{{.Name}}", "--vram",   "12"   ],
+        [ "modifyvm", "{{.Name}}", "--vrde",   "off"  ]
+      ],
+      "shutdown_command": "/sbin/halt -h -p"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "scripts": [
+        "scripts/centos/base.sh",
+        "scripts/centos/vagrant.sh",
+        "scripts/centos7/system.sh",
+        "scripts/centos/cleanup.sh",
+        "scripts/centos/zerodisk.sh"
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "compression_level": 9,
+      "keep_input_artifact": true,
+      "output": "builds/centos-7.5-x86_64.box"
+    }
+  ]
+}
