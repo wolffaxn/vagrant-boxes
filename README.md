@@ -37,4 +37,4 @@ vagrant box add wolffaxn/centos7 builds/centos-7.5-x86_64.box
 
 ## License
 
-This project is licensed under the terms of the MIT license. See the [LICENSE](LICENSE) file.
+This project is licensed under the terms of the [MIT license](LICENSE).
